@@ -150,13 +150,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Project Link: [https://github.com/collinsugwu/fanbant](https://github.com/collinsugwu/fanbant)
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Microverse](https://www.microverse.org/)
-* [The Odin Project](https://www.theodinproject.com/)
-
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

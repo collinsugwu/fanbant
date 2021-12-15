@@ -5,8 +5,7 @@ class ApplicationController < ActionController::API
   include ExceptionHandler
 
   def pagination_dict(collection)
-    return unless collection
-
+    return if collection.nil? || collection.class == Symbol
     {
 
       current_page: collection.current_page,

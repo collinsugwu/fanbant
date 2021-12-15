@@ -35,7 +35,7 @@ class SurveysController < ApplicationController
   # DELETE /surveys/:id
   def destroy
     if @survey.answers.present?
-      json_response('Cannot delete survey', 422)
+      json_response('Cannot delete survey, it has an answer', 422)
     else
       @survey.destroy
       head :no_content

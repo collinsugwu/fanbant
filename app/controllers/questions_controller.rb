@@ -18,7 +18,7 @@ class QuestionsController < ApplicationController
   # POST /surveys/:survey_id/questions
   def create
     if @survey.answers.present?
-      json_response('Cannot create question', 422)
+      json_response('Cannot create question, it has an answer', 422)
     else
       @survey.questions.create!(question_params)
       json_response(@survey, :created)
@@ -34,7 +34,7 @@ class QuestionsController < ApplicationController
   # DELETE /surveys/:survey_id/questions/:id
   def destroy
     if @question.answer.present?
-      json_response('Cannot delete question', 422)
+      json_response('Cannot delete question, it has an answer', 422)
     else
       @question.destroy
       head :no_content

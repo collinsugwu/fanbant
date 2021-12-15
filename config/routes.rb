@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     end
   end
 
-  # select an answer
+  # Answer a question
   get 'questions/:question_id/options/:option_id/answer', to: 'answers#answer'
 end

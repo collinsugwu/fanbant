@@ -118,6 +118,76 @@ rails db:seed
 rspec
 ```
 
+### Endpoints
+get all the surveys with questions, options,
+```
+GET /surveys
+```
+get all the surveys with questions, options, answers
+```
+GET /surveys/answers
+```
+create a survey
+```
+POST /surveys  Params: title
+```
+get a survey
+```
+GET /surveys/:id
+```
+update a survey
+```
+PUT /surveys/:id
+```
+
+delete a survey
+```
+DELETE /surveys/:id
+```
+get a survey analytics
+```
+GET surveys/:id/analytics
+```
+get survey questions
+```
+GET /surveys/:survey_id/questions
+```
+create a survey question
+```
+POST /surveys/:survey_id/questions Params: title
+```
+update a survey question
+```
+PUT /surveys/:survey_id/questions/:id
+```
+deete a survey question
+```
+Delete /surveys/:survey_id/questions/:id
+```
+get question options
+```
+GET /surveys/:survey_id/questions/:question_id/options
+``` 
+get an option 
+```
+GET /surveys/:survey_id/questions/:question_id/options/:id
+```
+create an option
+```
+POST /surveys/:survey_id/questions/:question_id/options Params: title
+```
+Update an option
+```
+PUT /surveys/:survey_id/questions/:question_id/options/:id
+```
+delete an option
+```
+DELETE /surveys/:survey_id/questions/:question_id/options/:id
+```
+Answer a question
+```
+GET /questions/:question_id/options/:option_id/answer
+```
 ## Roadmap
 
 See the [open issues](https://github.com/collinsugwu/fanbant/issues) for a list of proposed features (and known issues).

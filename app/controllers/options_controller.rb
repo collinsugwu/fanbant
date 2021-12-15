@@ -17,7 +17,7 @@ class OptionsController < ApplicationController
   # POST /surveys/:survey_id/questions/:question_id/options
   def create
     if @question.survey_detail.answers.present?
-      json_response('Cannot create option', 422)
+      json_response('Cannot create option, it has an answer', 422)
     else
       @question.options.create!(option_params)
       json_response(@question, :created)
@@ -33,7 +33,7 @@ class OptionsController < ApplicationController
   # DELETE /surveys/:survey_id/questions/:question_id/options/:id
   def destroy
     if @question.survey_detail.answers.present?
-      json_response('Cannot delete option', 422)
+      json_response('Cannot delete option, it has an answer', 422)
     else
       @option.destroy
       head :no_content

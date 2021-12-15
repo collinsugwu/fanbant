@@ -75,7 +75,7 @@ RSpec.describe "Questions", type: :request do
       end
 
       it 'returns a failure message' do
-        expect(response.body).to match(/Can not create a question/)
+        expect(response.body).to match(/Cannot create question/)
       end
     end
 
@@ -143,7 +143,7 @@ RSpec.describe "Questions", type: :request do
     context 'when there is an answer ' do
       before { delete "/surveys/#{survey_id}/questions/#{id}" }
 
-      it 'can not delete survey with answer' do
+      it 'Cannot delete survey with answer' do
         expect(response).to have_http_status(422)
       end
     end

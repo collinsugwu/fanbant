@@ -106,7 +106,7 @@ RSpec.describe "Surveys", type: :request do
     context 'when there is an answer ' do
       before { delete "/surveys/#{survey_detail_id}" }
 
-      it 'can not delete survey with answer' do
+      it 'Cannot delete survey with answer' do
         expect(response).to have_http_status(422)
       end
     end

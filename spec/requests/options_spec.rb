@@ -76,7 +76,7 @@ RSpec.describe "Options", type: :request do
       end
 
       it 'returns a failure message' do
-        expect(response.body).to match(/Can not create an option/)
+        expect(response.body).to match(/Cannot create option/)
       end
     end
 
@@ -142,7 +142,7 @@ RSpec.describe "Options", type: :request do
     context 'when there is an answer ' do
       before { delete "/surveys/#{survey_id}/questions/#{question_id}/options/#{id}" }
 
-      it 'can not delete survey with answer' do
+      it 'Cannot delete survey with answer' do
         expect(response).to have_http_status(422)
       end
     end

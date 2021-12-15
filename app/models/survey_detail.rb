@@ -9,8 +9,5 @@ class SurveyDetail < ApplicationRecord
   # validations
   validates_presence_of :title
 
-  scope :has_answer, lambda {
-    joins(:questions).all
-  }
   # Ex:- scope :active, -> {where(:active => true)}
 end

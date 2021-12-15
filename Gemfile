@@ -25,7 +25,7 @@ gem 'puma', '~> 5.0'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Pagination
-gem 'pagy', '~> 5.6'
+gem 'will_paginate', '~> 3.1.0'
 
 # Generate Slug
 gem 'friendly_id', '~> 5.4.0'

@@ -5,15 +5,13 @@ class SurveysController < ApplicationController
 
   # GET /surveys
   def index
-    @surveys = SurveyDetail.includes(questions: :options)
-      .paginate(page: params[:page], per_page: 10)
+    @surveys = SurveyDetail.survey(params)
     json_response(@surveys.to_json(include: { questions: { include: :options } }))
   end
 
-  # GET /sureveys/answers
+  # GET /surveys/answers
   def surveys_with_answers
-    @surveys = SurveyDetail.includes({ questions: %i[options answer] })
-      .paginate(page: params[:page], per_page: 10)
+    @surveys = SurveyDetail.survey_with_answers(params)
     json_response(@surveys.to_json(include: { questions: { include: %i[options answer] } }))
   end
 

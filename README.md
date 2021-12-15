@@ -117,6 +117,10 @@ rails db:seed
 ```
 rspec
 ```
+5. Start Server
+```
+rails s
+```
 
 ### Endpoints
 get all the surveys with questions, options,

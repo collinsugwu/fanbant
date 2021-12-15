@@ -61,8 +61,8 @@ Anybody can answer questions in a survey.
 
 ### Built With
 This progam was made using this technologies
-* [Ruby](https://www.ruby-lang.org/en/)
-* [Rails](https://rubyonrails.org/)
+* [Ruby 3](https://www.ruby-lang.org/en/)
+* [Rails 6](https://rubyonrails.org/)
 * [SQLite](https://www.sqlite.org/index.html)
 * [Rubocop](https://github.com/rubocop-hq/rubocop)
 * [RSpec](https://github.com/rspec/rspec-rails)
